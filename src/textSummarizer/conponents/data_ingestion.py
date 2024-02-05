@@ -12,7 +12,7 @@ class DataIngestion:
         self.config = config
 
 
-
+    
     def download_file(self):
         if not os.path.exists(self.config.local_data_file):
             filename, headers = request.urlretrieve(
@@ -23,8 +23,8 @@ class DataIngestion:
         else:
             logger.info(f"File already exists of size: {get_size(Path(self.config.local_data_file))}")  
 
-
-
+        
+    
     def extract_zip_file(self):
         """
         zip_file_path: str
